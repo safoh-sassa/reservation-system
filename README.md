@@ -30,7 +30,7 @@ A simplified scheduling system that allows customers to request painting service
 ## ⚙️ Setup
 
 clone
-npm install\
+npm install
 
 configure DATABASE_URL and DATABASE_URL_ROOT in .env file
 
