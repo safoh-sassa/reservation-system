@@ -30,6 +30,7 @@ A simplified scheduling system that allows customers to request painting service
 ## ⚙️ Setup
 
   Configure DATABASE_URL and DATABASE_URL_ROOT in .env file
+  
   ```bash
   npm install
   npx prisma generate
