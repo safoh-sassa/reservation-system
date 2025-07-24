@@ -29,16 +29,16 @@ A simplified scheduling system that allows customers to request painting service
 
 ## ⚙️ Setup
 
-npm install
-
-configure DATABASE_URL and DATABASE_URL_ROOT in .env file
-
-npx prisma generate\
-npm run createDB\
-npx prisma migrate dev\
-npm run build\
-npm run dev\
-Go to http://localhost:3000 or the port shown in terminal
+  configure DATABASE_URL and DATABASE_URL_ROOT in .env file
+  ```bash
+  npm install
+  npx prisma generate
+  npm run createDB
+  npx prisma migrate dev
+  npm run build
+  npm run dev
+ ```
+  Go to http://localhost:3000 or the port shown in terminal
 
 ## API Endpoints
 
