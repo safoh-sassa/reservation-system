@@ -43,6 +43,8 @@ A simplified scheduling system that allows customers to request painting service
  ```
   Go to http://localhost:3000 or the port shown in terminal
 
+  <h3><a href="https://painting-scheduler.vercel.app" target="_blank">Live</a></h3>
+
 ## API Endpoints
 
 ### Customers
