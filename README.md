@@ -1,6 +1,9 @@
 # Painting Service Scheduler
 
-A simplified scheduling system that allows customers to request painting services for specific time slot. The system automatically assigns available painters based on their availability and provides alternative time slots when requested times are unavailable.
+A powerful scheduling application built with Next.js 15, TypeScript, Material-UI, MySQL, and Prisma ORM.
+The system enables customers to effortlessly book painting services for specific time slots. It intelligently auto-assigns
+available painters based on their availability and uses advanced caching strategies to ensure fast performance, even with large-scale databases. When a requested slot is taken, the system promptly suggests the nearest available alternatives.
+
 
 ## Features
 
