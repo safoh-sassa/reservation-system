@@ -1,0 +1,61 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Painter {
+  id            String          @id @default(cuid()) @db.Char(36)
+  name          String
+  email         String          @unique
+  phone         String?
+  availabilities Availability[]
+  bookings      Booking[]
+
+  @@map("painters")
+}
+
+model Customer {
+  id       String    @id @default(cuid()) @db.Char(36)
+  name     String
+  email    String    @unique
+  phone    String?
+  bookings Booking[]
+
+  @@map("customers")
+}
+
+model Availability {
+  id        String   @id @default(cuid()) @db.Char(36)
+  painterId String   @db.Char(36)
+  startTime DateTime
+  endTime   DateTime
+  painter   Painter  @relation(fields: [painterId], references: [id])
+
+  @@index([painterId])
+  @@map("availabilities")
+}
+
+model Booking {
+  id         String   @id @default(cuid()) @db.Char(36)
+  painterId  String   @db.Char(36)
+  customerId String   @db.Char(36)
+  startTime  DateTime
+  endTime    DateTime
+  status     String
+  painter    Painter  @relation(fields: [painterId], references: [id])
+  customer   Customer @relation(fields: [customerId], references: [id])
+
+  @@index([painterId])
+  @@index([customerId])
+  @@map("bookings")
+}
