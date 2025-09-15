@@ -1,4 +1,5 @@
 # Painting Service Scheduler
+<a href="https://painting-scheduler.vercel.app" target="_blank">Live</a>
 
 A simplified scheduling system that allows customers to request painting services for specific time slot. The system automatically assigns available painters based on their availability and provides alternative time slots when requested times are unavailable.
 
@@ -40,6 +41,8 @@ npx prisma migrate dev
 npm run build
 npm run dev
 Go to http://localhost:3000 or the port shown in terminal
+
+<a href="https://painting-scheduler.vercel.app" target="_blank">Live</a>
 
 ## API Endpoints
 
