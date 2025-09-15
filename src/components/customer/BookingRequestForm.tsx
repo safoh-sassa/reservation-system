@@ -38,7 +38,6 @@ export default function BookingRequestForm({
               startTime: e.target.value,
             })
           }
-          fullWidth
           disabled={loading}
           InputLabelProps={{ shrink: true }}
           inputProps={{
@@ -46,6 +45,7 @@ export default function BookingRequestForm({
             style: { fontSize: "16px" },
           }}
           sx={{
+            maxWidth: 260,
             '& input[type="datetime-local"]': {
               colorScheme: "light",
             },
@@ -58,7 +58,6 @@ export default function BookingRequestForm({
           onChange={(e) =>
             setBookingForm({ ...bookingForm, endTime: e.target.value })
           }
-          fullWidth
           disabled={loading}
           InputLabelProps={{ shrink: true }}
           inputProps={{
@@ -66,6 +65,7 @@ export default function BookingRequestForm({
             style: { fontSize: "16px" },
           }}
           sx={{
+            maxWidth: 260,
             '& input[type="datetime-local"]': {
               colorScheme: "light",
             },
